@@ -2,7 +2,7 @@
 //  Lab2App.swift
 //  Lab2
 //
-//  Created by María Espejo on 29/4/24.
+//  Created by María Espejo
 //
 
 import SwiftUI
