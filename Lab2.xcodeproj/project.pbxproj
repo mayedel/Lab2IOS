@@ -11,6 +11,12 @@
 		6C6905AE2BDFE93000365071 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905AD2BDFE93000365071 /* ContentView.swift */; };
 		6C6905B02BDFE93300365071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6905AF2BDFE93300365071 /* Assets.xcassets */; };
 		6C6905B32BDFE93300365071 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6905B22BDFE93300365071 /* Preview Assets.xcassets */; };
+		6C6905BA2BDFF4B900365071 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905B92BDFF4B900365071 /* Figure.swift */; };
+		6C6905BC2BDFF50C00365071 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905BB2BDFF50C00365071 /* Triangle.swift */; };
+		6C6905BF2BDFF8AD00365071 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905BE2BDFF8AD00365071 /* Rectangle.swift */; };
+		6C6905C12BDFF8B800365071 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905C02BDFF8B800365071 /* Circle.swift */; };
+		6C6905C72BDFFF5100365071 /* AreaCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905C62BDFFF5100365071 /* AreaCalculatorView.swift */; };
+		6C6905C92BE000FC00365071 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905C82BE000FC00365071 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		6C6905AD2BDFE93000365071 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6C6905AF2BDFE93300365071 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C6905B22BDFE93300365071 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6C6905B92BDFF4B900365071 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		6C6905BB2BDFF50C00365071 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		6C6905BE2BDFF8AD00365071 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		6C6905C02BDFF8B800365071 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		6C6905C62BDFFF5100365071 /* AreaCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorView.swift; sourceTree = "<group>"; };
+		6C6905C82BE000FC00365071 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				6C6905AB2BDFE93000365071 /* Lab2App.swift */,
-				6C6905AD2BDFE93000365071 /* ContentView.swift */,
+				6C6905C52BDFFF1400365071 /* AreaCalculator */,
+				6C6905BD2BDFF52000365071 /* Model */,
+				6C6905C22BDFFCCA00365071 /* Main */,
 				6C6905AF2BDFE93300365071 /* Assets.xcassets */,
 				6C6905B12BDFE93300365071 /* Preview Content */,
 			);
@@ -65,6 +79,34 @@
 				6C6905B22BDFE93300365071 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6C6905BD2BDFF52000365071 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C6905B92BDFF4B900365071 /* Figure.swift */,
+				6C6905BB2BDFF50C00365071 /* Triangle.swift */,
+				6C6905BE2BDFF8AD00365071 /* Rectangle.swift */,
+				6C6905C02BDFF8B800365071 /* Circle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C6905C22BDFFCCA00365071 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6C6905AD2BDFE93000365071 /* ContentView.swift */,
+				6C6905C82BE000FC00365071 /* ContentViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6C6905C52BDFFF1400365071 /* AreaCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				6C6905C62BDFFF5100365071 /* AreaCalculatorView.swift */,
+			);
+			path = AreaCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6905C92BE000FC00365071 /* ContentViewModel.swift in Sources */,
+				6C6905BF2BDFF8AD00365071 /* Rectangle.swift in Sources */,
 				6C6905AE2BDFE93000365071 /* ContentView.swift in Sources */,
 				6C6905AC2BDFE93000365071 /* Lab2App.swift in Sources */,
+				6C6905BA2BDFF4B900365071 /* Figure.swift in Sources */,
+				6C6905BC2BDFF50C00365071 /* Triangle.swift in Sources */,
+				6C6905C12BDFF8B800365071 /* Circle.swift in Sources */,
+				6C6905C72BDFFF5100365071 /* AreaCalculatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
