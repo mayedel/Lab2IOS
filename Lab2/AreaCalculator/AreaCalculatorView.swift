@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AreaCalculatorView: View {
+    @StateObject var viewModel: AreaCalculatorViewModel?
     
     var body: some View {
         Text("Area Calculator")
@@ -18,6 +19,7 @@ struct AreaCalculatorView: View {
 
 struct AreaCalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        AreaCalculatorView()
+        let areaCalculatorViewModel = AreaCalculatorViewModel()
+        AreaCalculatorView(viewModel:areaCalculatorViewModel)
     }
 }

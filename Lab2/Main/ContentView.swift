@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel: ContentViewModel
+    
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AreaCalculatorView()) {
+                Button(action: {
+                    viewModel.didTapFigureButton(imageName: "Triangle")
+                }) {
                     FigureButton(imageName: "Triangle")
                 }
                 
-                NavigationLink(destination: AreaCalculatorView()) {
+                Button(action: {
+                    viewModel.didTapFigureButton(imageName: "Rectangle")
+                }) {
                     FigureButton(imageName: "Rectangle")
                 }
                 
-                NavigationLink(destination: AreaCalculatorView()) {
-                    FigureButton(imageName: "Circle")
+                Button(action: {
+                    viewModel.didTapFigureButton(imageName: "Hexagon")
+                }) {
+                    FigureButton(imageName: "Hexagon")
                 }
             }
             .navigationTitle("Figures")
@@ -38,7 +46,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let contentViewModel = ContentViewModel()
+        ContentView(viewModel:contentViewModel)
     }
 }
 

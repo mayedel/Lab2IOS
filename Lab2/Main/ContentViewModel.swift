@@ -7,15 +7,26 @@
 
 import Foundation
 
-class ContentViewViewModel: ObservableObject {
-    let figureType: FigureType
+protocol PolygonObserver: AnyObject {
+    func polygonSelected(_ polygon: String?)
+}
+
+class ContentViewModel {
     
-    init(figureType: FigureType) {
-        self.figureType = figureType
+    weak var observer: PolygonObserver?
+    @Published var selectedPolygon: String?
+    
+    func didTapFigureButton(imageName: String) {
+        selectedPolygon = imageName
+        notifyObserver()
+    }
+    
+    func notifyObserver() {
+        observer?.polygonSelected(selectedPolygon)
+    }
+   
+    func navigateToAreaCalculatorView() -> AreaCalculatorView {
+        return AreaCalculatorView()
     }
 }
-enum FigureType: String {
-    case triangle = "Triangle"
-    case rectangle = "Rectangle"
-    case circle = "Circle"
-}
+
