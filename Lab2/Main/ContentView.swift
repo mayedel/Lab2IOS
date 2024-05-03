@@ -8,40 +8,75 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: ContentViewModel
+    @ObservedObject var viewModel: ContentViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                Button(action: {
-                    viewModel.didTapFigureButton(imageName: "Triangle")
-                }) {
-                    FigureButton(imageName: "Triangle")
-                }
+                //                FigureButton(imageName: "Triangle", action: {
+                //                    viewModel.didTapFigureButton(imageName: "Triangle")
+                //                })
+                //
+                //                FigureButton(imageName: "Rectangle", action: {
+                //                    viewModel.didTapFigureButton(imageName: "Rectangle")
+                //                })
+                //
+                //                FigureButton(imageName: "Hexagon", action: {
+                //                    viewModel.didTapFigureButton(imageName: "Hexagon")
+                //                })
+                NavigationLink(
+                    destination: AreaCalculatorView(viewModel: AreaCalculatorViewModel()),
+                    tag: "Triangle",
+                    selection: $viewModel.selectedPolygon) {
+                        FigureButton(imageName: "Triangle"){
+                            viewModel.didTapFigureButton(imageName: "Triangle")
+                        }
+                    }
                 
-                Button(action: {
-                    viewModel.didTapFigureButton(imageName: "Rectangle")
-                }) {
-                    FigureButton(imageName: "Rectangle")
-                }
+                NavigationLink(
+                    destination: AreaCalculatorView(viewModel: AreaCalculatorViewModel()),
+                    tag: "Rectangle",
+                    selection: $viewModel.selectedPolygon) {
+                        FigureButton(imageName: "Rectangle"){
+                            viewModel.didTapFigureButton(imageName: "Rectangle")
+                        }
+                    }
                 
-                Button(action: {
-                    viewModel.didTapFigureButton(imageName: "Hexagon")
-                }) {
-                    FigureButton(imageName: "Hexagon")
-                }
+                NavigationLink(
+                    destination: AreaCalculatorView(viewModel: AreaCalculatorViewModel()),
+                    tag: "Hexagon",
+                    selection: $viewModel.selectedPolygon) {
+                        FigureButton(imageName: "Hexagon"){
+                            viewModel.didTapFigureButton(imageName: "Hexagon")
+                        }
+                    }
             }
             .navigationTitle("Figures")
         }
     }
     
-    private func FigureButton(imageName: String) -> some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 100, height: 100)
-            .padding()
+    //    private func FigureButton(imageName: String) -> some View {
+    //        Image(imageName)
+    //            .resizable()
+    //            .aspectRatio(contentMode: .fit)
+    //            .frame(width: 100, height: 100)
+    //            .padding()
+    //    }
+    struct FigureButton: View {
+        let imageName: String
+        let action: () -> Void
+        
+        var body: some View {
+            Button(action: action) {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .padding()
+            }
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

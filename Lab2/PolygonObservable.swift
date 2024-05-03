@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol PolygonObservable: AnyObject {
-    func addObserver(_ observer: PolygonObserver)
-    func removeObserver(_ observer: PolygonObserver)
-    func notifyObserver()
-}
+//protocol PolygonObservable: AnyObject {
+//    func addObserver(_ observer: PolygonObserver)
+//    func removeObserver(_ observer: PolygonObserver)
+//    func notifyObserver()
+//}

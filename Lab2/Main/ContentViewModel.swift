@@ -7,11 +7,17 @@
 
 import Foundation
 
+protocol PolygonObservable: AnyObject {
+    func addObserver(_ observer: PolygonObserver)
+    func removeObserver(_ observer: PolygonObserver)
+    func notifyObserver()
+}
+
 protocol PolygonObserver: AnyObject {
     func polygonSelected(_ polygon: String?)
 }
 
-class ContentViewModel {
+class ContentViewModel:ObservableObject, PolygonObservable {
     
     weak var observer: PolygonObserver?
     @Published var selectedPolygon: String?
@@ -19,14 +25,20 @@ class ContentViewModel {
     func didTapFigureButton(imageName: String) {
         selectedPolygon = imageName
         notifyObserver()
+        print(selectedPolygon ?? "no hay nada")
+    }
+    
+    func addObserver(_ observer: PolygonObserver) {
+        self.observer = observer
+    }
+    
+    func removeObserver(_ observer: PolygonObserver) {
+        self.observer = nil
     }
     
     func notifyObserver() {
         observer?.polygonSelected(selectedPolygon)
     }
-   
-    func navigateToAreaCalculatorView() -> AreaCalculatorView {
-        return AreaCalculatorView()
-    }
+    
 }
 
