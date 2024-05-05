@@ -21,6 +21,6 @@ class Rectangle: Figure {
     }
     
     override func description() -> String {
-        return "El área se calcula"
+        return "El área de un rectángulo se calcula multiplicando su base por su altura."
     }
 }

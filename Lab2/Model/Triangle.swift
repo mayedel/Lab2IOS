@@ -21,7 +21,7 @@ class Triangle: Figure {
     }
     
     override func description() -> String {
-        return "El área se calcula"
+        return "El área de un triángulo se calcula multiplicando la base por la altura y dividiendo el resultado por 2."
     }
     
 }

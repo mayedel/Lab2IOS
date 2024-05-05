@@ -10,8 +10,8 @@ import Combine
 
 class AreaCalculatorViewModel:ObservableObject  {
     var selectedPolygon: String?
-    var area: Double?
-    var description: String?
+    @Published var area: Double?
+    @Published var description: String?
     private var width: Double?
     private var height: Double?
     
@@ -20,8 +20,38 @@ class AreaCalculatorViewModel:ObservableObject  {
     
     func onAppear() {}
     
-    func calculateArea(width: Double?, height: Double?){
+    func calculateArea(selectedPolygon: String?, width: Double?, height: Double?) {
+        guard let selectedPolygon = selectedPolygon else {
+            return
+        }
         
+        switch selectedPolygon {
+        case "Rectangle":
+            guard let width = width, let height = height else {
+                return
+            }
+            let rectangle = Rectangle(width: width, height: height)
+            area = rectangle.area()
+            description = rectangle.description()
+        case "Triangle":
+            guard let width = width, let height = height else {
+                return
+            }
+            let triangle = Triangle(width: width, height: height)
+            area = triangle.area()
+            description = triangle.description()
+        case "Hexagon":
+            guard let width = width, let height = height else {
+                return
+            }
+            let hexagon = Hexagon(width: width, height: height)
+            area = hexagon.area()
+            description = hexagon.description()
+        default:
+            area = nil
+            description = nil
+        }
     }
+
     
 }

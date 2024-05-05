@@ -28,12 +28,16 @@ struct ContentView: View {
                 NavigationLink(destination: AreaCalculatorView(selectedPolygon: viewModel.selectedPolygon ?? "",viewModel: AreaCalculatorViewModel()),
                                isActive: Binding<Bool>(
                                 get: { viewModel.selectedPolygon != nil },
-                                set: { _ in })
+                                set: { isActive in
+                                    if !isActive {
+                                        viewModel.selectedPolygon = nil
+                                    } })
                 ) {
                     EmptyView()
                 }
             }
             .navigationTitle("Figures")
+            .id(UUID()) 
         }
     }
     struct FigureButton: View {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AreaCalculatorView: View {
-    var selectedPolygon: String? 
+    var selectedPolygon: String?
     @ObservedObject var viewModel: AreaCalculatorViewModel
     @State private var width: Double?
     @State private var height: Double?
@@ -28,11 +28,14 @@ struct AreaCalculatorView: View {
                 .padding()
             
             estiloBoton(action: calculateArea, label: "Calcular Área")
-            .padding()
+                .padding()
             
             if let area = viewModel.area, let description = viewModel.description {
-                Text("Area: \(area)")
-                Text("Descripción: \(description)")
+                VStack {
+                    Text("Area: \(area)")
+                    Text("Descripción: \(description)")
+                }
+                .padding()
             }
         }
         .onAppear {
@@ -60,13 +63,14 @@ struct AreaCalculatorView: View {
     }
     
     private func calculateArea() {
-        viewModel.calculateArea(width: width, height: height)
+        viewModel.calculateArea(selectedPolygon:selectedPolygon, width: width, height: height)
     }
     
-//    struct AreaCalculatorView_Previews: PreviewProvider {
-//        static var previews: some View {
-//            let areaCalculatorViewModel = AreaCalculatorViewModel()
-//            AreaCalculatorView(selectedPolygon: selectedPolygon, viewModel: AreaCalculatorViewModel())
-//        }
-//    }
+    struct AreaCalculatorView_Previews: PreviewProvider {
+        static var previews: some View {
+            let areaCalculatorViewModel = AreaCalculatorViewModel()
+            let selectedPolygon = "Triangle"
+            AreaCalculatorView(selectedPolygon: selectedPolygon, viewModel: areaCalculatorViewModel)
+        }
+    }
 }
