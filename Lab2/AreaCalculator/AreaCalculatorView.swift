@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct AreaCalculatorView: View {
+    var selectedPolygon: String? 
     @ObservedObject var viewModel: AreaCalculatorViewModel
-    @State private var base: Double?
+    @State private var width: Double?
     @State private var height: Double?
     
     var body: some View {
         VStack {
-            Text(viewModel.selectedPolygon ?? "No polygon selected")
+            Text(selectedPolygon ?? "No polygon selected")
                 .font(.title)
                 .padding()
             
-            TextField("Base", value: $base, formatter: NumberFormatter())
+            TextField("Base", value: $width, formatter: NumberFormatter())
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
@@ -59,13 +60,13 @@ struct AreaCalculatorView: View {
     }
     
     private func calculateArea() {
-        viewModel.calculateArea(base: base, height: height)
+        viewModel.calculateArea(width: width, height: height)
     }
     
-    struct AreaCalculatorView_Previews: PreviewProvider {
-        static var previews: some View {
-            let areaCalculatorViewModel = AreaCalculatorViewModel()
-            AreaCalculatorView(viewModel:areaCalculatorViewModel)
-        }
-    }
+//    struct AreaCalculatorView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            let areaCalculatorViewModel = AreaCalculatorViewModel()
+//            AreaCalculatorView(selectedPolygon: selectedPolygon, viewModel: AreaCalculatorViewModel())
+//        }
+//    }
 }

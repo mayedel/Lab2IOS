@@ -8,15 +8,12 @@
 import Foundation
 
 class Figure {
-    var base: Double
-    var height: Double
 
-    init(base: Double, height: Double) {
-        self.base = base
-        self.height = height
+    func area() -> Double {
+        fatalError("Subclass must override area method")
     }
-
-    func area(base: Double, height: Double) -> Double {
+    
+    func description() -> String {
         fatalError("Subclass must override area method")
     }
 }

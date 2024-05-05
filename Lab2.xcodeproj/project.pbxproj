@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C06E9252BE3A8FE00D90DA1 /* AreaCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9242BE3A8FD00D90DA1 /* AreaCalculatorViewModel.swift */; };
-		6C06E9272BE3ABC600D90DA1 /* PolygonViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9262BE3ABC600D90DA1 /* PolygonViewModelFactory.swift */; };
-		6C06E9292BE3AC5800D90DA1 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9282BE3AC5800D90DA1 /* Polygon.swift */; };
-		6C06E92B2BE3AC7700D90DA1 /* RectangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E92A2BE3AC7700D90DA1 /* RectangleViewModel.swift */; };
-		6C06E92E2BE3ACC500D90DA1 /* TriangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E92D2BE3ACC500D90DA1 /* TriangleViewModel.swift */; };
-		6C06E9312BE3ACF400D90DA1 /* HexagonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9302BE3ACF400D90DA1 /* HexagonViewModel.swift */; };
-		6C06E9342BE3AE5D00D90DA1 /* SimplePolygonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9332BE3AE5D00D90DA1 /* SimplePolygonFactory.swift */; };
-		6C06E9362BE3AE7900D90DA1 /* PolygonClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9352BE3AE7900D90DA1 /* PolygonClient.swift */; };
-		6C06E9382BE3BDD800D90DA1 /* PolygonObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06E9372BE3BDD800D90DA1 /* PolygonObservable.swift */; };
 		6C6905AC2BDFE93000365071 /* Lab2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905AB2BDFE93000365071 /* Lab2App.swift */; };
 		6C6905AE2BDFE93000365071 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6905AD2BDFE93000365071 /* ContentView.swift */; };
 		6C6905B02BDFE93300365071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6905AF2BDFE93300365071 /* Assets.xcassets */; };
@@ -30,14 +22,6 @@
 
 /* Begin PBXFileReference section */
 		6C06E9242BE3A8FD00D90DA1 /* AreaCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCalculatorViewModel.swift; sourceTree = "<group>"; };
-		6C06E9262BE3ABC600D90DA1 /* PolygonViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonViewModelFactory.swift; sourceTree = "<group>"; };
-		6C06E9282BE3AC5800D90DA1 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
-		6C06E92A2BE3AC7700D90DA1 /* RectangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewModel.swift; sourceTree = "<group>"; };
-		6C06E92D2BE3ACC500D90DA1 /* TriangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleViewModel.swift; sourceTree = "<group>"; };
-		6C06E9302BE3ACF400D90DA1 /* HexagonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonViewModel.swift; sourceTree = "<group>"; };
-		6C06E9332BE3AE5D00D90DA1 /* SimplePolygonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePolygonFactory.swift; sourceTree = "<group>"; };
-		6C06E9352BE3AE7900D90DA1 /* PolygonClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonClient.swift; sourceTree = "<group>"; };
-		6C06E9372BE3BDD800D90DA1 /* PolygonObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonObservable.swift; sourceTree = "<group>"; };
 		6C6905A82BDFE93000365071 /* Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6905AB2BDFE93000365071 /* Lab2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab2App.swift; sourceTree = "<group>"; };
 		6C6905AD2BDFE93000365071 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,33 +46,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6C06E92C2BE3ACAC00D90DA1 /* Rectangle */ = {
-			isa = PBXGroup;
-			children = (
-				6C6905BE2BDFF8AD00365071 /* Rectangle.swift */,
-				6C06E92A2BE3AC7700D90DA1 /* RectangleViewModel.swift */,
-			);
-			path = Rectangle;
-			sourceTree = "<group>";
-		};
-		6C06E92F2BE3ACDF00D90DA1 /* Triangle */ = {
-			isa = PBXGroup;
-			children = (
-				6C6905BB2BDFF50C00365071 /* Triangle.swift */,
-				6C06E92D2BE3ACC500D90DA1 /* TriangleViewModel.swift */,
-			);
-			path = Triangle;
-			sourceTree = "<group>";
-		};
-		6C06E9322BE3AD0A00D90DA1 /* Hexagon */ = {
-			isa = PBXGroup;
-			children = (
-				6C6905C02BDFF8B800365071 /* Hexagon.swift */,
-				6C06E9302BE3ACF400D90DA1 /* HexagonViewModel.swift */,
-			);
-			path = Hexagon;
-			sourceTree = "<group>";
-		};
 		6C69059F2BDFE93000365071 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +71,6 @@
 				6C6905C22BDFFCCA00365071 /* Main */,
 				6C6905AF2BDFE93300365071 /* Assets.xcassets */,
 				6C6905B12BDFE93300365071 /* Preview Content */,
-				6C06E9372BE3BDD800D90DA1 /* PolygonObservable.swift */,
 			);
 			path = Lab2;
 			sourceTree = "<group>";
@@ -131,13 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				6C6905B92BDFF4B900365071 /* Figure.swift */,
-				6C06E92F2BE3ACDF00D90DA1 /* Triangle */,
-				6C06E92C2BE3ACAC00D90DA1 /* Rectangle */,
-				6C06E9322BE3AD0A00D90DA1 /* Hexagon */,
-				6C06E9262BE3ABC600D90DA1 /* PolygonViewModelFactory.swift */,
-				6C06E9282BE3AC5800D90DA1 /* Polygon.swift */,
-				6C06E9332BE3AE5D00D90DA1 /* SimplePolygonFactory.swift */,
-				6C06E9352BE3AE7900D90DA1 /* PolygonClient.swift */,
+				6C6905BE2BDFF8AD00365071 /* Rectangle.swift */,
+				6C6905C02BDFF8B800365071 /* Hexagon.swift */,
+				6C6905BB2BDFF50C00365071 /* Triangle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,23 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C06E92B2BE3AC7700D90DA1 /* RectangleViewModel.swift in Sources */,
 				6C6905C92BE000FC00365071 /* ContentViewModel.swift in Sources */,
 				6C6905BF2BDFF8AD00365071 /* Rectangle.swift in Sources */,
-				6C06E9272BE3ABC600D90DA1 /* PolygonViewModelFactory.swift in Sources */,
 				6C06E9252BE3A8FE00D90DA1 /* AreaCalculatorViewModel.swift in Sources */,
-				6C06E9362BE3AE7900D90DA1 /* PolygonClient.swift in Sources */,
 				6C6905AE2BDFE93000365071 /* ContentView.swift in Sources */,
-				6C06E9292BE3AC5800D90DA1 /* Polygon.swift in Sources */,
 				6C6905AC2BDFE93000365071 /* Lab2App.swift in Sources */,
-				6C06E9342BE3AE5D00D90DA1 /* SimplePolygonFactory.swift in Sources */,
 				6C6905BA2BDFF4B900365071 /* Figure.swift in Sources */,
-				6C06E92E2BE3ACC500D90DA1 /* TriangleViewModel.swift in Sources */,
-				6C06E9382BE3BDD800D90DA1 /* PolygonObservable.swift in Sources */,
 				6C6905BC2BDFF50C00365071 /* Triangle.swift in Sources */,
 				6C6905C12BDFF8B800365071 /* Hexagon.swift in Sources */,
 				6C6905C72BDFFF5100365071 /* AreaCalculatorView.swift in Sources */,
-				6C06E9312BE3ACF400D90DA1 /* HexagonViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

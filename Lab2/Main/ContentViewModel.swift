@@ -6,39 +6,19 @@
 //
 
 import Foundation
+import Combine
 
-protocol PolygonObservable: AnyObject {
-    func addObserver(_ observer: PolygonObserver)
-    func removeObserver(_ observer: PolygonObserver)
-    func notifyObserver()
-}
-
-protocol PolygonObserver: AnyObject {
-    func polygonSelected(_ polygon: String?)
-}
-
-class ContentViewModel:ObservableObject, PolygonObservable {
+class ContentViewModel:ObservableObject {
     
-    weak var observer: PolygonObserver?
     @Published var selectedPolygon: String?
+    
+    init(){}
     
     func didTapFigureButton(imageName: String) {
         selectedPolygon = imageName
-        notifyObserver()
-        print(selectedPolygon ?? "no hay nada")
     }
     
-    func addObserver(_ observer: PolygonObserver) {
-        self.observer = observer
-    }
-    
-    func removeObserver(_ observer: PolygonObserver) {
-        self.observer = nil
-    }
-    
-    func notifyObserver() {
-        observer?.polygonSelected(selectedPolygon)
-    }
     
 }
+
 

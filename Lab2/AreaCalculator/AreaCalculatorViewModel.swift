@@ -6,35 +6,22 @@
 //
 
 import Foundation
+import Combine
 
-class AreaCalculatorViewModel:ObservableObject, PolygonObserver  {
-    @Published var selectedPolygon: String?
-    @Published var area: Double?
-    @Published var description: String?
-    private var base: Double?
+class AreaCalculatorViewModel:ObservableObject  {
+    var selectedPolygon: String?
+    var area: Double?
+    var description: String?
+    private var width: Double?
     private var height: Double?
+    
     
     init() {}
     
     func onAppear() {}
     
-    //    private let polygonViewModelFactory: PolygonViewModelFactory
-    //
-    //    init(polygonViewModelFactory: PolygonViewModelFactory) {
-    //        self.polygonViewModelFactory = polygonViewModelFactory
-    //    }
-    //
-    
-    func polygonSelected(_ polygon: String?) {
-        self.selectedPolygon = polygon
-    }
-    
-    func calculateArea(base: Double?, height: Double?){
+    func calculateArea(width: Double?, height: Double?){
         
     }
-    //
-    //    func createPolygonViewModel(type: String, parameters: [Double]) -> PolygonViewModel? {
-    //        return polygonViewModelFactory.createViewModel(type: type, parameters: parameters)
-    //    }
     
 }
